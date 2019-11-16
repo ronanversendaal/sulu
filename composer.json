@@ -1,4 +1,6 @@
 {
+    "name": "ronanversendaal/sulu",
+    "description": "A website made with Sulu CMS and Vue.js",
     "license": "proprietary",
     "type": "project",
     "keywords": ["symfony", "sulu", "cms", "application", "admin"],
