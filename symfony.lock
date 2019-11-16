@@ -98,9 +98,6 @@
     "egulias/email-validator": {
         "version": "2.1.11"
     },
-    "fig/link-util": {
-        "version": "1.0.0"
-    },
     "friendsofsymfony/http-cache": {
         "version": "2.7.0"
     },
@@ -306,9 +303,6 @@
     },
     "psr/http-message": {
         "version": "1.0.1"
-    },
-    "psr/link": {
-        "version": "1.0.0"
     },
     "psr/log": {
         "version": "1.1.0"
@@ -643,9 +637,6 @@
         "version": "v4.3.5"
     },
     "symfony/var-exporter": {
-        "version": "v4.3.5"
-    },
-    "symfony/web-link": {
         "version": "v4.3.5"
     },
     "symfony/web-profiler-bundle": {
