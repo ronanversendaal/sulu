@@ -20,49 +20,55 @@
     {% endblock %}
 </head>
 <body>
-    <div id="app">
-        <header>
-            {% block header %}
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="{{ sulu_content_root_path() }}">Homepage</a>
-                        </li>
+    <div id="app" class="container">
+        <b-row>
+            <header>
+                {% block header %}
+                    <b-nav>
+
+                        <b-nav-item href="{{ sulu_content_root_path() }}">Homepage</b-nav-item>
 
                         {% for item in sulu_navigation_root_tree('main') %}
-                            <li>
-                                <a href="{{ sulu_content_path(item.url) }}"
-                                   title="{{ item.title }}">{{ item.title }}</a>
-                            </li>
+
+                            <b-nav-item href="{{ sulu_content_path(item.url) }}" title="{{ item.title }}">{{ item.title }}</b-nav-item>
                         {% endfor %}
-                    </ul>
-                </nav>
-            {% endblock %}
-        </header>
 
-        <form action="{{ path('sulu_search.website_search') }}" method="GET">
-            <input name="q" type="text" class="form-control" placeholder="Search"/>
-            <input type="submit" value="Go"/>
-        </form>
 
-        <section id="content">
-            {% block content %}{% endblock %}
-        </section>
+                        <b-nav-form action="{{ path('sulu_search.website_search') }}" method="GET">
+                            <label class="sr-only" for="navbar-search">Search</label>
+                            <b-form-input aria-label="Input" name="q" type="text" id="navbar-search" class="form-control" placeholder="Search" />
+                            <b-button type="submit">Go</b-button>
+                        </b-nav-form>
+                    </b-nav>
+                {% endblock %}
+            </header>
+        </b-row>
 
-        <aside>
-            {% block aside %}{% endblock %}
-        </aside>
+        <b-row>
+            <section id="content">
 
-        <footer>
-            {% block footer %}
-                <p>Copyright {{ 'now'|date('Y') }} SULU</p>
-            {% endblock %}
-        </footer>
+                    {% block content %}{% endblock %}
+            </section>
+        </b-row>
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+        <b-row>
+            <aside>
+                {% block aside %}{% endblock %}
+            </aside>
+        </b-row>
+
+        <b-row>
+            <footer>
+                {% block footer %}
+                    <p>Copyright {{ 'now'|date('Y') }} SULU</p>
+                {% endblock %}
+            </footer>
+        </b-row>
+
     </div>
 
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
 </body>
 </html>
