@@ -1,23 +1,38 @@
-# Sulu Skeleton
+# Sulu Website
 
-[![GitHub license](https://img.shields.io/github/license/sulu/skeleton.svg)](https://github.com/sulu/skeleton/blob/master/LICENSE)
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/sulu/skeleton.svg)](https://github.com/sulu/skeleton/releases)
-[![GitHub tag (latest pre-release)](https://img.shields.io/github/tag-pre/sulu/skeleton.svg)](https://github.com/sulu/skeleton/releases)
-[![Travis](https://travis-ci.org/sulu/skeleton.png?branch=master)](https://travis-ci.org/sulu/skeleton)
+[![GitHub license](https://img.shields.io/github/license/ronanversendaal/sulu.svg)](https://github.com/sulu/skeleton/blob/master/LICENSE)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/ronanversendaal/sulu.svg)](https://github.com/ronanversendaal/sulu/releases)
+[![Build Status](https://travis-ci.com/ronanversendaal/sulu.svg?branch=master)](https://travis-ci.com/ronanversendaal/sulu)
 
 
-Welcome to the *Sulu Skeleton* - the recommended skeleton to start a new [Sulu](https://github.com/sulu/sulu) project.
+This is a website made with Sulu CMS.
 
-## Start your project
+This website is made with *Sulu Skeleton* - the recommended skeleton to start a new [Sulu](https://github.com/sulu/sulu) project.
 
-Start your new project using [composer](https://getcomposer.org/) with the following command:
+## Start the project
+
+Start the project using [ddev](https://ddev.com/) with the following command:
 
 ```bash
-composer create-project sulu/skeleton my-project
+ddev start
 ```
 
-Follow the [Getting Started documentation](http://docs.sulu.io/en/latest/book/getting-started.html) to configure sulu correctly.
+After that run:
+
+```bash
+ddev exec composer install
+```
+
+When this is done, build the project for the required environment :
+
+```bash
+ddev exec ./bin/adminconsole sulu:build [dev, prod]
+```
+
+## Configuration
+
+Follow the [Getting Started documentation](http://docs.sulu.io/en/latest/book/getting-started.html) to configure Sulu correctly.
 
 ## Issues
 
-Submit any sulu related issues to the [sulu/sulu](https://github.com/sulu/sulu/issues) repository.
+Submit any Sulu related issues to the [sulu/sulu](https://github.com/sulu/sulu/issues) repository.
