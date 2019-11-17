@@ -1,5 +1,8 @@
 language: php
 
+os: linux
+dist: trusty
+
 php:
   - 5.5
   - 7.2
